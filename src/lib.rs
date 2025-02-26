@@ -1,3 +1,5 @@
+#![feature(new_range_api)]
+
 use hex_simd::Out;
 use sha2::{Digest, Sha256};
 
@@ -22,3 +24,5 @@ pub fn process_hash(password: &[u8], md5_hex_buf: &mut [u8; 32], final_hex: &mut
     // Hex encode SHA256
     let _ = hex_simd::encode(&sha_hash, out, hex_simd::AsciiCase::Lower);
 }
+
+pub mod brute;
