@@ -8,3 +8,10 @@ argh = "0.1.13"
 hex-simd = "0.8.0"
 md5 = "0.7.0"
 sha2 = { version = "0.10.8" }
+
+[profile.bench]
+lto = true
+
+[profile.release]
+lto = true
+panic = "abort"
